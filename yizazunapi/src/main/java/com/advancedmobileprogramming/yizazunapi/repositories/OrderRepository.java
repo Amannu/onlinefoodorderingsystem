@@ -2,8 +2,8 @@ package com.advancedmobileprogramming.yizazunapi.repositories;
 
 import org.springframework.data.repository.CrudRepository;
 
-import com.advancedmobileprogramming.yizazunapi.models.Order;
+import com.advancedmobileprogramming.yizazunapi.models.OrderList;
 
-public interface OrderRepository extends CrudRepository<Order, Long> {
+public interface OrderRepository extends CrudRepository<OrderList, Long> {
 
 }

@@ -3,7 +3,7 @@ package com.advancedmobileprogramming.yizazunapi.models;
 import lombok.Data;
 
 import javax.persistence.*;
-import java.util.List;
+import java.util.Set;
 
 @Data
 @Entity
@@ -21,5 +21,9 @@ public class Food {
     
     @Lob
     private byte[] food_image;
+    
+    @OneToMany(mappedBy = "food", cascade = CascadeType.ALL)
+    private Set<OrderList> orderlist;
 
+    
 }
