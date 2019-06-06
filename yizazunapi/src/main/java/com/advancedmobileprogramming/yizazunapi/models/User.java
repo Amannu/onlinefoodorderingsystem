@@ -3,7 +3,6 @@ package com.advancedmobileprogramming.yizazunapi.models;
 import lombok.Data;
 
 import javax.persistence.*;
-import java.util.Set;
 
 @Data
 @Entity
@@ -21,10 +20,7 @@ public class User {
 
     private String password;
 
-    @ManyToMany()
-    @JoinTable(name = "user_role", joinColumns = @JoinColumn(name = "user_id"),
-            inverseJoinColumns = @JoinColumn(name = "role_id"))
-    private Set<Role> roles;
+    private String role;
     
     @OneToOne(fetch = FetchType.LAZY,cascade =  CascadeType.ALL,mappedBy = "user")
 	private OrderList order_list;
