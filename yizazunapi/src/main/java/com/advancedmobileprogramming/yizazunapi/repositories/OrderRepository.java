@@ -5,5 +5,6 @@ import org.springframework.data.repository.CrudRepository;
 import com.advancedmobileprogramming.yizazunapi.models.OrderList;
 
 public interface OrderRepository extends CrudRepository<OrderList, Long> {
+	Iterable<OrderList> findByUserId(Long user);
 
 }
