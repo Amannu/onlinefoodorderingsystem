@@ -12,11 +12,11 @@ interface UserDao {
     fun getUserByUserId(userId:Long): LiveData<User>
 
     @Insert
-    fun insertOrder(user: User)
+    fun insertUser(user: User)
 
     @Delete
-    fun deleteFood(user: User)
+    fun deleteUser(id:Long)
 
     @Update
-    fun updateFood(user: User)
+    fun updateUser(id:Long,user: User)
 }

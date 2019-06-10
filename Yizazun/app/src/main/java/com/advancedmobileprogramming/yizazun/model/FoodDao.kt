@@ -11,14 +11,14 @@ interface FoodDao {
     fun getAllFood(): LiveData<List<Food>>
 
     @Query("SELECT * From food WHERE id=:foodId")
-    fun getFoodByFoodName(foodId:String):LiveData<Food>
+    fun getFoodByFoodId(foodId:Long):LiveData<Food>
 
     @Insert
     fun insertFood(food: Food)
 
     @Delete
-    fun deleteFood(food: Food)
+    fun deleteFood(id:Long)
 
     @Update
-    fun updateFood(food: Food)
+    fun updateFood(id:Long,food: Food)
 }

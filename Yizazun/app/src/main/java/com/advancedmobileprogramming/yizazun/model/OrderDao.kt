@@ -9,14 +9,14 @@ interface OrderDao {
     fun getAllOrder(): LiveData<List<Order>>
 
     @Query("SELECT * From `order_list` WHERE user_id=:userId")
-    fun getFoodByUserId(userId:Long): LiveData<List<Order>>
+    fun getOrderByUserId(userId:Long): LiveData<List<Order>>
 
     @Insert
     fun insertOrder(order: Order)
 
     @Delete
-    fun deleteFood(order: Order)
+    fun deleteFood(id:Long)
 
     @Update
-    fun updateFood(order: Order)
+    fun updateFood(id:Long,order: Order)
 }

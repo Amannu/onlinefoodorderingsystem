@@ -13,11 +13,11 @@ import retrofit2.http.*
 
 interface OrderYizazunApiService {
     @GET("orderLists/{id}")
-    fun findFoodByIdAsync(@Path("id") id: Long): Deferred<Response<LiveData<Order>>>
+    fun findOrderByIdAsync(@Path("id") id: Long): Deferred<Response<LiveData<Order>>>
     @GET("orderLists")
-    fun findAllFoodAsync(): Deferred<Response<LiveData<List<Order>>>>
+    fun findAllOrderAsync(): Deferred<Response<LiveData<List<Order>>>>
     @GET("orderLists/search/findByUserId?{id}")
-    fun findFoodByUserIdAsync(@Path("id") id: Long): Deferred<Response<LiveData<Order>>>
+    fun findOrderByUserIdAsync(@Path("id") id: Long): Deferred<Response<LiveData<Order>>>
     @POST("orderLists")
     fun insertOrderAsync(@Body newOrder: Order): Deferred<Response<Void>>
     @PUT("orderLists/{id}")
