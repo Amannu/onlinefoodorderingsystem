@@ -22,7 +22,7 @@ interface FoodApiService {
     fun postFoods(newFood: Food): Deferred<Response<Void>>
 
     @PUT("foods/{id}")
-    fun updateFoods(@Path("id") id:Long): Deferred<Response<Void>>
+    fun updateFoods(@Path("id") id: Long, @Body food: Food): Deferred<Response<Food>>
 
     @DELETE("foods/{id}")
     fun deleteFoods(@Path("id") id:Long): Deferred<Response<Void>>

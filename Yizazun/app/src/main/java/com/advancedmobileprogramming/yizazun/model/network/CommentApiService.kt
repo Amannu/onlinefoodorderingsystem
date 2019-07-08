@@ -22,7 +22,7 @@ interface CommentApiService {
     fun postComments(newComment: Comment): Deferred<Response<Void>>
 
     @PUT("comments/{id}")
-    fun updateComments(@Path("id") id:Long): Deferred<Response<Void>>
+    fun updateComments(@Path("id") id: Long, @Body comment: Comment): Deferred<Response<Comment>>
 
     @DELETE("comments/{id}")
     fun deleteComments(@Path("id") id:Long): Deferred<Response<Void>>

@@ -22,7 +22,7 @@ interface OrderListApiService {
     fun postOrderList(newOrderList: OrderList): Deferred<Response<Void>>
 
     @PUT("orderLists/{id}")
-    fun updateOrderList(@Path("id") id:Long): Deferred<Response<Void>>
+    fun updateOrderList(@Path("id") id: Long, @Body orderList: OrderList): Deferred<Response<OrderList>>
 
     @DELETE("orderLists/{id}")
     fun deleteOrderList(@Path("id") id:Long): Deferred<Response<Void>>

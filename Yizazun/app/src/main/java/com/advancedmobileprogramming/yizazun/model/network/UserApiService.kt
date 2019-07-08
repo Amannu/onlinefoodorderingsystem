@@ -5,9 +5,9 @@ import com.jakewharton.retrofit2.adapter.kotlin.coroutines.CoroutineCallAdapterF
 import kotlinx.coroutines.Deferred
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
-import retrofit2.converter.moshi.MoshiConverterFactory
 import retrofit2.Response
 import retrofit2.Retrofit
+import retrofit2.converter.moshi.MoshiConverterFactory
 import retrofit2.http.*
 
 interface UserApiService {
@@ -22,7 +22,7 @@ interface UserApiService {
     fun postUsers(newUser: User):Deferred<Response<Void>>
 
     @PUT("users/{id}")
-    fun updateUsers(@Path("id") id:Long):Deferred<Response<Void>>
+    fun updateUsers(@Path("id") id: Long, @Body user: User):Deferred<Response<User>>
 
     @DELETE("users/{id}")
     fun deleteUsers(@Path("id") id:Long):Deferred<Response<Void>>

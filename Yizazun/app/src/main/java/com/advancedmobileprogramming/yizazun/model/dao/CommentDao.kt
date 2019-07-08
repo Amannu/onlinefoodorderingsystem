@@ -10,7 +10,7 @@ interface CommentDao {
     fun getCommentById(id: Long): LiveData<Comment>
 
     @Query("SELECT * FROM comment ORDER BY  id ")
-    fun getCommentDrink(): LiveData<List<Comment>>
+    fun getComments(): LiveData<List<Comment>>
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     fun insertComment(comment: Comment)
