@@ -1,8 +1,8 @@
-package com.advancedmobileprogramming.yizazunapi.repositories;
+package com.amp.apiyizazun.repositories;
 
 import org.springframework.data.repository.CrudRepository;
 
-import com.advancedmobileprogramming.yizazunapi.models.Food;
+import com.amp.apiyizazun.models.Food;
 
 public interface FoodRepository extends CrudRepository<Food, Long> {
 

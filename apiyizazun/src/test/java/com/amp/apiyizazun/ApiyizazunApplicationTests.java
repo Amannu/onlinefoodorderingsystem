@@ -1,4 +1,4 @@
-package com.advancedmobileprogramming.yizazunapi;
+package com.amp.apiyizazun;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -7,7 +7,7 @@ import org.springframework.test.context.junit4.SpringRunner;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest
-public class YizazunapiApplicationTests {
+public class ApiyizazunApplicationTests {
 
 	@Test
 	public void contextLoads() {

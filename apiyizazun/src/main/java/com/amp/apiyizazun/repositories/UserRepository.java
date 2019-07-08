@@ -1,7 +1,9 @@
-package com.advancedmobileprogramming.yizazunapi.repositories;
+package com.amp.apiyizazun.repositories;
 
-import com.advancedmobileprogramming.yizazunapi.models.User;
 import org.springframework.data.repository.CrudRepository;
 
+import com.amp.apiyizazun.models.User;
+
 public interface UserRepository extends CrudRepository<User, Long> {
+
 }
