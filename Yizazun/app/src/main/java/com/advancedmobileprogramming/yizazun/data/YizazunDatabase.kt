@@ -1,45 +1,39 @@
-package com.advancedmobileprogramming.yizazun.model
+package com.example.yizazun.data
 
 import android.content.Context
 import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
-import com.advancedmobileprogramming.yizazun.model.dao.*
-import com.advancedmobileprogramming.yizazun.model.entities.*
+import com.example.yizazun.data.dao.AnnouncementDao
+import com.example.yizazun.data.dao.DrinkDao
+import com.example.yizazun.data.dao.FoodDao
+import com.example.yizazun.data.entity.*
 
-@Database(entities = arrayOf(Comment::class,Drink::class,Food::class,OrderList::class,User::class),version = 1,exportSchema = false)
+@Database(entities = [Food::class,Drink::class,Announcement::class,SpecialOffers::class], version = 2,exportSchema = false)
 abstract class YizazunDatabase:RoomDatabase() {
-    abstract fun commentDao():CommentDao
-    abstract fun drinkDao():DrinkDao
     abstract fun foodDao():FoodDao
-    abstract fun orderListDao():OrderListDao
-    abstract fun userDao():UserDao
-
+    abstract fun drinkDao():DrinkDao
+    abstract fun announcementDao():AnnouncementDao
+    abstract fun specialOffersDao():AnnouncementDao
     companion object {
-
         @Volatile
         private var INSTANCE: YizazunDatabase? = null
 
-        fun getDatabase(context: Context): YizazunDatabase {
-
+        fun getDatabase(context: Context):YizazunDatabase{
             val tempInstance = INSTANCE
-            if (tempInstance != null) {
+            if(tempInstance != null){
                 return tempInstance
             }
-
-            synchronized(this) {
-
+            synchronized(this){
                 val instance = Room.databaseBuilder(
                     context.applicationContext,
-                    YizazunDatabase::class.java, "yizazun_database"
+                    YizazunDatabase::class.java,"yizazun_database"
                 )
                     .fallbackToDestructiveMigration()
                     .build()
-
                 INSTANCE = instance
                 return instance
             }
-
         }
     }
 }
