@@ -1,6 +1,67 @@
 <?xml version="1.0" encoding="utf-8"?>
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
             xmlns:app="http://schemas.android.com/apk/res-auto"
-            android:id="@+id/nav_graph">
+            android:id="@+id/postFoodFragment">
+<fragment android:id="@+id/postFoodFragment"
+              android:name="com.example.yizazun.view.FoodFragment"
+              android:label="fragment_add_food" tools:layout="@layout/fragment_add_food">
+        <action android:id="@+id/action_postFoodFragment_to_authorFragment" app:destination="@id/foodFragment"
+                app:enterAnim="@anim/enter_from_left" app:exitAnim="@anim/exit_to_right"
+                app:popEnterAnim="@anim/enter_from_right" app:popExitAnim="@anim/exit_to_left"/>
+    </fragment>
+    <fragment android:id="@+id/editFoodFragment"
+              android:name="com.example.yizazun.view.FoodFragment"
+              android:label="fragment_edit_food" tools:layout="@layout/fragment_edit_food">
+        <action android:id="@+id/action_editFoodFragment_to_foodFragment" app:destination="@id/foodFragment"
+                app:enterAnim="@anim/enter_from_left" app:exitAnim="@anim/exit_to_right"
+                app:popEnterAnim="@anim/enter_from_right" app:popExitAnim="@anim/exit_to_left"/>
+        <argument android:name="argId" app:argType="integer" android:defaultValue="0"/>
+    </fragment>
+<fragment android:id="@+id/postDrinkFragment"
+              android:name="com.example.yizazun.view.DrinkFragment"
+              android:label="fragment_add_food" tools:layout="@layout/fragment_add_food">
+        <action android:id="@+id/action_postFoodFragment_to_authorFragment" app:destination="@id/foodFragment"
+                app:enterAnim="@anim/enter_from_left" app:exitAnim="@anim/exit_to_right"
+                app:popEnterAnim="@anim/enter_from_right" app:popExitAnim="@anim/exit_to_left"/>
+    </fragment>
+    <fragment android:id="@+id/editDrinkFragment"
+              android:name="com.example.yizazun.view.DrinkFragment"
+              android:label="fragment_edit_food" tools:layout="@layout/fragment_edit_food">
+        <action android:id="@+id/action_editFoodFragment_to_foodFragment" app:destination="@id/foodFragment"
+                app:enterAnim="@anim/enter_from_left" app:exitAnim="@anim/exit_to_right"
+                app:popEnterAnim="@anim/enter_from_right" app:popExitAnim="@anim/exit_to_left"/>
+        <argument android:name="argId" app:argType="integer" android:defaultValue="0"/>
+    </fragment>
+<fragment android:id="@+id/postAnnouncementFragment"
+              android:name="com.example.yizazun.view.AnnounceFragment"
+              android:label="fragment_add_food" tools:layout="@layout/fragment_add_food">
+        <action android:id="@+id/action_postFoodFragment_to_authorFragment" app:destination="@id/foodFragment"
+                app:enterAnim="@anim/enter_from_left" app:exitAnim="@anim/exit_to_right"
+                app:popEnterAnim="@anim/enter_from_right" app:popExitAnim="@anim/exit_to_left"/>
+    </fragment>
+    <fragment android:id="@+id/editAnnouncementFragment"
+              android:name="com.example.yizazun.view.AnnounceFragment"
+              android:label="fragment_edit_food" tools:layout="@layout/fragment_edit_food">
+        <action android:id="@+id/action_editFoodFragment_to_foodFragment" app:destination="@id/foodFragment"
+                app:enterAnim="@anim/enter_from_left" app:exitAnim="@anim/exit_to_right"
+                app:popEnterAnim="@anim/enter_from_right" app:popExitAnim="@anim/exit_to_left"/>
+        <argument android:name="argId" app:argType="integer" android:defaultValue="0"/>
+    </fragment>
+<fragment android:id="@+id/postOfferFragment"
+              android:name="com.example.yizazun.view.OfferFragment"
+              android:label="fragment_add_food" tools:layout="@layout/fragment_add_food">
+        <action android:id="@+id/action_postFoodFragment_to_authorFragment" app:destination="@id/foodFragment"
+                app:enterAnim="@anim/enter_from_left" app:exitAnim="@anim/exit_to_right"
+                app:popEnterAnim="@anim/enter_from_right" app:popExitAnim="@anim/exit_to_left"/>
+    </fragment>
+    <fragment android:id="@+id/editOfferFragment"
+              android:name="com.example.yizazun.view.OfferFragment"
+              android:label="fragment_edit_food" tools:layout="@layout/fragment_edit_food">
+        <action android:id="@+id/action_editFoodFragment_to_foodFragment" app:destination="@id/foodFragment"
+                app:enterAnim="@anim/enter_from_left" app:exitAnim="@anim/exit_to_right"
+                app:popEnterAnim="@anim/enter_from_right" app:popExitAnim="@anim/exit_to_left"/>
+        <argument android:name="argId" app:argType="integer" android:defaultValue="0"/>
+    </fragment>
+    
 
 </navigation>
