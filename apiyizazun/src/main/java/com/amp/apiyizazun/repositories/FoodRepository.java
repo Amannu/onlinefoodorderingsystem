@@ -4,6 +4,6 @@ import org.springframework.data.repository.CrudRepository;
 
 import com.amp.apiyizazun.models.Food;
 
-public interface FoodRepository extends CrudRepository<Food, Long> {
+public interface FoodRepository extends CrudRepository<Food, Integer> {
 
 }

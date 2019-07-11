@@ -4,6 +4,6 @@ import org.springframework.data.repository.CrudRepository;
 
 import com.amp.apiyizazun.models.Drink;
 
-public interface DrinkRepository extends CrudRepository<Drink, Long> {
+public interface DrinkRepository extends CrudRepository<Drink,Integer> {
 
 }

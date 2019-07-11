@@ -7,12 +7,11 @@ import lombok.Data;
 
 @Data
 @Entity
-public class Drink {
+public class SpecialOffers {
 	@Id
     private int id;
 	
 	private String name;
 
 	private String content;
-
 }
